@@ -14,5 +14,14 @@
     "nuxt": "^2.0.0",
     "element-ui": "^2.4.11"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "prettier": "^1.18.2",
+    "vue-eslint-parser": "^5.0.0"
+  }
 }
