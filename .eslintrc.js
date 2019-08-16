@@ -16,19 +16,13 @@ module.exports = {
     ],
     // *.vue ファイルを lint にかけるために必要
     plugins: [
-        'vue',
-        "prettier"
+        'vue'
     ],
     // ここにカスタムルールを追加します。
     rules: {
         "semi": [2, "never"],
         "no-console": "off",
         "vue/max-attributes-per-line": "off",
-        "prettier/prettier": [
-            "error", {
-                "tabWidth": 2,
-                "semi": false,
-            }
-        ]
+        "prettier/prettier": ["error", { "semi": false }]
     }
 }
