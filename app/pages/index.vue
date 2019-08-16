@@ -47,49 +47,47 @@ export default {
       const cookies = new Cookies()
       if (this.isCreateMode) {
         try {
-          await this.register({ ...this.formData})
+          await this.register({ ...this.formData })
           this.$notify({
             type: 'success',
             title: 'アカウント作成完了',
-            message: `${this.formData.id}として登録しました`,
+            message: `${this.formData.id} として登録しました`,
             position: 'bottom-right',
-            duration: '1000'
+            duration: 1000
           })
-          consol.log(this.user)
           cookies.set('user', JSON.stringify(this.user))
           this.$router.push('/posts/')
         } catch (e) {
           this.$notify.error({
             title: 'アカウント作成失敗',
-            message: '既に登録されていか、不正なユーザーIDです',
+            message: '既に登録されているか、不正なユーザー ID です',
             position: 'bottom-right',
-            duration: '1000'
+            duration: 1000
           })
         }
       } else {
         try {
-          await this.login({ ...this.formData})
+          await this.login({ ...this.formData })
           this.$notify({
             type: 'success',
             title: 'ログイン成功',
-            message: `${this.formData.id}としてログインしました`,
+            message: `${this.formData.id} としてログインしました`,
             position: 'bottom-right',
-            duration: '1000'
+            duration: 1000
           })
           cookies.set('user', JSON.stringify(this.user))
           this.$router.push('/posts/')
         } catch (e) {
           this.$notify.error({
-            type: 'success',
             title: 'ログイン失敗',
-            message: '不正なユーザーIDです',
+            message: '不正なユーザー ID です',
             position: 'bottom-right',
-            duration: '1000'
+            duration: 1000
           })
         }
       }
     },
-    ...mapActions(['login', 'regiser'])
+    ...mapActions(['login', 'register'])
   }
 }
 </script>
