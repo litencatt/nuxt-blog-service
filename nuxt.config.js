@@ -17,6 +17,9 @@ export default {
     loading: { color: "#fff" },
     css: ["element-ui/lib/theme-chalk/index.css"],
     plugins: ["@/plugins/element-ui"],
+    router: {
+        middleware: ['auth-cookie']
+    },
     devModules: [],
     modules: [
         '@nuxtjs/axios'
