@@ -25,7 +25,7 @@ export default {
         '@nuxtjs/axios'
     ],
     axios: {
-        baseURL: "https://nuxt-blog-service-c0e71.firebaseio.com"
+        baseURL: ""
     },
     build: {
         transpile: [/^element-ui/],
