@@ -25,7 +25,7 @@ export default {
         '@nuxtjs/axios'
     ],
     axios: {
-        baseURL: ""
+        baseURL: process.env.BASE_URL
     },
     build: {
         transpile: [/^element-ui/],
