@@ -28,6 +28,8 @@ export const actions = {
     async fetchPosts({ commit }) {
         const posts = await this.$axios.$get(`/posts.json`)
         commit('clearPosts')
+        if (!posts) return null
+
         Object.entries(posts)
             .reverse()
             .forEach(([id, content]) =>
