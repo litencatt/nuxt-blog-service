@@ -9,10 +9,10 @@
     </el-menu-item>
 
     <no-ssr>
-      <el-menu-item index="4" style="float: right;" :route="{ path: `/users/${user.id}`}" v-if="user">
+      <el-menu-item v-if="user" index="4" style="float: right;" :route="{ path: `/users/${user.id}`}">
         <span>{{user.id}}</span>
       </el-menu-item>
-      <el-menu-item index="4" style="float: right;" :route="{ path: '/'}" v-else>
+      <el-menu-item v-else index="4" style="float: right;" :route="{ path: '/'}">
         <span>ログイン</span>
       </el-menu-item>
     </no-ssr>
