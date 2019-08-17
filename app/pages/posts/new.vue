@@ -2,7 +2,7 @@
   <section class="container posts-page">
     <el-card style="flex: 1">
       <div slot="header" class="clearfix">
-        <el-input placeholder="タイトルを入力" v-model="formData.tile" />
+        <el-input placeholder="タイトルを入力" v-model="formData.title" />
       </div>
       <el-input placeholder="本文を入力....." type="textarea" rows="15" v-model="formData.body" />
     </el-card>
